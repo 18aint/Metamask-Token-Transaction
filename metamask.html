@@ -1,0 +1,491 @@
+<head>
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css">
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"
+    integrity="sha512-5erpERW8MxcHDF7Xea9eBQPiRtxbse70pFcaHJuOhdEBQeAxGQjUwgJbuBDWve+xP/u5IoJbKjyJk50qCnMD7A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+
+<body class="h-full" data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="background: #000; color: white; width: 90%;">
+  
+  <p class="nav-item"><a href="index.html" class="nav-link00" style="position: absolute; right: 710px; font-size: 16px; font-weight: 200; color: white;  margin-top: 4px;"><span>←</span></a></p>
+
+  <nav style="margin-top: 50px;" class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container" style="background-color: transparent;">
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: 585px; margin-bottom: 15px; margin-top: 15px; background-color: black;">
+        <span class="oi oi-menu"><a href="" style="margin-left: 100px;" ></a></span> 
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav"  style="width: 100%;">
+        <ul class="navbar-nav nav ml-auto" style="width: 100%;">
+
+          <li class="nav-item"><a href="metamask.html" class="nav-link" style="font-size: 16px; color: white; font-weight: 200; margin-left: 450px; margin-right: 20px;"><span>Wallet</span></a></li>
+          <li class="nav-item"><a href="/src/404/daily-ui-008404-page/dist/index.html" class="nav-link" style="font-size: 16px; color: white; font-weight: 200;"><span>NFT's</span></a></li>
+
+      
+      </div>
+    </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <P style=" position: absolute; font-size: 14px; margin-left: 50px; margin-top: 100px; font-weight:100; margin-right: 30px;"><a style="cursor: pointer; color: white;" href="/src/index.html"> Home</a><a style="color: white; margin-left: 15px;" href="#">></a><a style="color: #3576E4; margin-left: 15px;">Wallet</a></P>
+    <hr style="color: white; position: absolute;">
+  </div>
+
+
+<section style="
+  -webkit-transform: scale(0.90);
+-moz-transform: scale(0.90);
+     transform: scale(0.90);"
+     >
+</div>
+
+<div style=" position: absolute; margin-left: 0px; margin-top: 200px; color: #fff;">
+
+  <div style="margin-left: 60px; margin-top: 0;"
+class="
+flex
+w-full
+h-full
+justify-center
+content-center
+items-center
+space-x-4
+"
+>
+<div  style="margin-top: 30px; margin-left: 330px;" class="flex flex-col space-y-6">
+<div class="flex flex-col space-y-2">
+  <button
+    onclick="loginWithEth()"
+    class="
+      rounded
+      bg-#1C2D4A
+      hover:bg-gray-100
+      py-2
+      px-4
+      text-gray-600
+      hover:text-gray-700
+    "
+    style="width: 100%; background-color: #1C2D4A; border: 1px solid #3576E4; color: #3576E4;"
+  >
+    Connect Wallet
+  </button>
+  <p style="width: 580px; line-height: 20px; margin-left: 0px; margin-top: 10px; margin-bottom: -15px;" id="userAddress" class="text-gray-600">></p>
+</p>
+  <img style="position: absolute; height: 35px; top: 78px; margin-top: 10px; display: none;" id="userAddress_img" src="/src/images/metamask-icon logo.png" alt="">
+
+  
+  </div>
+  <button
+    id="getContractInfo"
+    onclick="getContractSymbol()"
+    class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white"
+    style="margin-bottom: -70px;"
+  >
+    Get Contract Symbol
+  </button>
+  
+  <p style="display:inline; margin-top: 120px;">
+    <span style="font-size: 12px; color: #5E728B;">Avg. Daily Gas Fee(ETH/GBP)</span>
+    <span style="margin-left: 368px; font-size: 12px; color: #5E728B;">£196.638</span>
+ </p>
+ <p style="display:inline; margin-top: -50px;">
+  <span style="font-size: 12px; color: #5E728B;">Avg. Gas Fee(ETH/GBP)</span>
+  <span style="margin-left: 385px; font-size: 12px; color: #5E728B;">23.5732452</span>
+</p>
+<p style="display:inline; margin-top: -50px;">
+  <span style="font-size: 12px; color: #5E728B;">1 ETH Cost</span>
+  <span style="margin-left: 405px; font-size: 12px; color: #5E728B;">£1429.68<span style="font-weight: 100; color: white; margin-left: 10px;">-0.024500</span></span>
+</p>
+
+
+
+  
+  <p style="position: relative; top: 105px; margin-top: -50px; font-size: 12px; left: 0px; color: #5E728B;">You Receive</p>
+
+  <form id="tokenClaim">
+    <p style="position: relative; top: 90px; font-size: 12px; left: 20px; color: #5E728B;">Ethereum</p>
+    <p style="position: relative; display: inline; top: 80px; left: 18px; color: white;"><img style="display: inline; margin-right: 5px;" src="/src/images/Group.png" alt=""> ETH </p>
+    <input style="border: #fff;   width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #2C3D6F;
+    background-color: #060A0F;
+    height: 95px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 100;
+    " id="input" type="text"/>
+    <p style="color: #035989; text-align: center; font-size: 12px;">Testnet LINK covers transactions for testing purposes</p>
+    <p style="color: #035989;  text-align: center; font-size: 12px;">Funds that you receive through Chainlink Faucets are not real funds. <br> To get testnet LINK, connect to your wallet.</p>
+    <input style=" border-radius: 10px; padding: 10px 10px; width: 100%; border: 1px solid #3576E4; color: #3576E4; background-color: #1C2D4A;" id="submitBtn" type="submit" value="Request"/>
+    </form>
+  <button
+  id="logoutButton"
+  onclick="logout()"
+  class="hidden text-red-500 underline"
+  >
+  Logout
+  </button>
+  <div class="flex flex-col space-y-2"></div>
+  </div>
+  </div>
+
+
+</section>
+  <script>
+
+window.userAddress = null;
+window.onload = async () => {
+// Init Web3 connected to ETH network
+if (window.ethereum) {
+  window.web3 = new Web3(window.ethereum);
+} else {
+  alert("No ETH brower extension detected.");
+}
+
+// Load in Localstore key
+window.userAddress = window.localStorage.getItem("userAddress");
+showAddress();
+};
+
+// Use this function to turn a 42 character ETH address
+// into an address like 0x345...12345
+function truncateAddress(address) {
+if (!address) {
+  return "";
+}
+return `${address.substr(0, 5)}...${address.substr(
+  address.length - 5,
+  address.length
+)}`;
+}
+
+// Display or remove the users know address on the frontend
+function showAddress() {
+if (!window.userAddress) {
+  document.getElementById("userAddress").innerText = "";
+  document.getElementById("logoutButton").classList.add("hidden");
+  return false;
+}
+
+document.getElementById(
+  "userAddress"
+).innerText = `ETH Address: ${(window.userAddress)}`;
+document.getElementById("logoutButton").classList.remove("hidden");
+}
+
+// remove stored user address and reset frontend
+function logout() {
+window.userAddress = null;
+window.localStorage.removeItem("userAddress");
+
+showAddress();
+}
+
+// Login with Web3 via Metamasks window.ethereum library
+async function loginWithEth() {
+if (window.web3) {
+  try {
+    // We use this since ethereum.enable() is deprecated. This method is not
+    // available in Web3JS - so we call it directly from metamasks' library
+    const selectedAccount = await window.ethereum
+      .request({
+        method: "eth_requestAccounts",
+      })
+      .then((accounts) => accounts[0])
+      .catch(() => {
+        throw Error("No account selected!");
+      });
+    window.userAddress = selectedAccount;
+    window.localStorage.setItem("userAddress", selectedAccount);
+    showAddress();
+  } catch (error) {
+    console.error(error);
+  }
+} else {
+  alert("No ETH brower extension detected.");
+}
+}
+
+// Go to blockchain and get the contract symbol. Keep in mind
+// YOU MUST BE CONNECT TO RINKEBY NETWORK TO USE THIS FUNCTION
+// why -> because this specific contract address is on ethereum.
+// When you click login, just make sure your network is Rinkeby and it will all workout.
+async function getContractSymbol() {
+const CONTRACT_ADDRESS = "0x49dB5b02F5F2685c85f50E2eE024399BD9eEAEec";
+const contract = new window.web3.eth.Contract(
+  window.ABI,
+  CONTRACT_ADDRESS
+);
+const symbol = await contract.methods
+  .symbol()
+  .call({ from: window.userAddress });
+alert(`Contract ${CONTRACT_ADDRESS} Symbol: ${symbol}`);
+}
+
+
+    // Check for a Web3 provider
+    if (typeof web3 !== 'undefined') {
+      web3 = new Web3(ethereum);
+      console.log(web3.eth.accounts);
+    } else {
+      web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+    var address = "0xb0cbfc48c8A1aCf96C6888D404B10E5f10A90076"; // Contract address
+    var minter_address = "0xD1e2f37D48d87D11ceA7ea93a374bAc0ed2DfCa7"; // Minter address
+    var contract = new web3.eth.Contract([
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "remaining",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "balance",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+], address);
+  console.log(contract);
+
+  async function claim(amount) {
+    const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
+    const account = accounts[0];
+    const tx = await contract.methods.transferFrom(minter_address, account, amount).send({from:account});
+  }
+
+  const form = document.getElementById("tokenClaim");
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(form.input.value);
+    claim(form.input.value);
+  })
+
+
+  </script>
+
+</body>
